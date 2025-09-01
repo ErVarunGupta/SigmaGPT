@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import { useContext, useState } from "react";
 import { MyContext } from "../../MyContext";
+const api_url = import.meta.env.VITE_BACKEND_URL;
 
 export const EditProfile = () => {
   const {userProfile, setUserProfile} = useContext(MyContext);
@@ -36,7 +37,7 @@ export const EditProfile = () => {
         const userId = decoded.id;
 
         try {
-            const url = `http://localhost:8080/user/${userId}`;
+            const url = `${api_url}/user/${userId}`;
             const response = await fetch(url, {
                 method: 'PUT',
                 headers: {

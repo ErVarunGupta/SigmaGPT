@@ -7,6 +7,7 @@ import { RiCloseFill } from "react-icons/ri";
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+const api_url = import.meta.env.VITE_BACKEND_URL;
 
 const UserCard = () => {
   const { userProfile, setUserProfile, toggleProfile, setToggleProfile } =
@@ -20,7 +21,7 @@ const UserCard = () => {
     try {
       const decoded = jwtDecode(token);
       const userId = decoded.id;
-      const url = `http://localhost:8080/user/${userId}`;
+      const url = `${api_url}/user/${userId}`;
       const response = await fetch(url);
       const data = await response.json();
       // console.log(data);
@@ -47,7 +48,7 @@ const UserCard = () => {
       }
       const decode = jwtDecode(token);
       const userId = decode.id;
-      const url = `http://localhost:8080/user/${userId}`;
+      const url = `${api_url}/user/${userId}`;
       const response = await fetch(url, {
         method: "DELETE",
         headers: {

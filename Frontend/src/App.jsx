@@ -8,6 +8,7 @@ import { Login } from "./components/authComponents/Login";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "./components/NotFound";
 import { EditProfile } from "./components/authComponents/EditProfile";
+import StartingWindow from "./components/StartingWindow";
 
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
     <>
       <MyContext.Provider value={providerValues}>
         <Routes>
+          <Route path={"/api"} element={<StartingWindow/>}/>
           <Route path={"/dashboard"} element={<Dashboard/>}/>
           <Route path={"/signup"} element={<Signup/>}/>
           <Route path={"/login"} element={<Login/>}/>

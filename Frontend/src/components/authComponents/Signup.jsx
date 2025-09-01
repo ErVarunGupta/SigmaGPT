@@ -1,15 +1,17 @@
 import { Link } from "react-router-dom";
 import "./Auth.css";
 import { useNavigate } from "react-router-dom";
+const api_url = import.meta.env.VITE_BACKEND_URL;
 
 export const Signup = () => {
+  console.log(api_url);
     const navigate = useNavigate();
     const formSubmitHandler = async(formData) =>{
         const formInputData = Object.fromEntries(formData.entries());
         console.log(formInputData);
 
         try {
-            const url = "http://localhost:8080/user/signup";
+            const url = `${api_url}/user/signup`;
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {

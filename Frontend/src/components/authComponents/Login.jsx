@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+const api_url = import.meta.env.VITE_BACKEND_URL;
 
 export const Login = () => {
     const navigate = useNavigate();
@@ -8,7 +9,7 @@ export const Login = () => {
         console.log(formInputData);
 
         try {
-            const url = "http://localhost:8080/user/login";
+            const url = `${api_url}/user/login`;
             const response = await fetch(url, {
                 method: "POST",
                 headers: {

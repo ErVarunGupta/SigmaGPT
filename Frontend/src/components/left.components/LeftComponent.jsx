@@ -8,6 +8,8 @@ import { MdWindow } from "react-icons/md";
 import { v4 as uuidv4 } from "uuid";
 import {jwtDecode} from 'jwt-decode'
 
+const api_url = import.meta.env.VITE_BACKEND_URL;
+
 import "./LeftComponent.css";
 import LeftNavbar from "./LeftNavbar";
 import { MyContext } from "../../MyContext";
@@ -76,7 +78,7 @@ export const LeftComponent = () => {
 
   const fetchTitle = async () => {
     try {
-      const url = "http://localhost:8080/api/thread";
+      const url = `${api_url}/api/thread`;
 
       const response = await fetch(url);
       const data = await response.json();
@@ -105,7 +107,7 @@ export const LeftComponent = () => {
 
   const changeThread = async (threadId) => {
     try {
-      const url = `http://localhost:8080/api/thread/${threadId}`;
+      const url = `${api_url}/api/thread/${threadId}`;
       const response = await fetch(url);
       const data = await response.json();
       console.log(data.response[0].messages);
@@ -121,7 +123,7 @@ export const LeftComponent = () => {
 
   const deleteThread = async (threadId) => {
     try {
-      const url = `http://localhost:8080/api/thread/${threadId}`;
+      const url = `${api_url}/api/thread/${threadId}`;
       const response = await fetch(url, {
         method: "DELETE"
       });

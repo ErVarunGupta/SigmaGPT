@@ -6,6 +6,7 @@ import {ScaleLoader} from "react-spinners";
 import Chat from "./Chat";
 import { MyContext } from "../../MyContext";
 import './RightComponent.css'
+const api_url = import.meta.env.VITE_BACKEND_URL;
 
 export const RightComponent = () => {
   const {reply, setReply, prompt, setPrompt, prevChats, setPrevChats, newChat, setNewChat, currThreadId} = useContext(MyContext);
@@ -17,7 +18,7 @@ export const RightComponent = () => {
     setNewChat(false);
     try {
       // const inputdivData = Object.fromEntries(divData.entries());
-      const url = "http://localhost:8080/api/chat";
+      const url = `${api_url}/api/chat`;
 
       const response = await fetch(url, {
           method: "POST",
