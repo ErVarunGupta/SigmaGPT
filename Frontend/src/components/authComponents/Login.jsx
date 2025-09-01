@@ -8,7 +8,7 @@ export const Login = () => {
         console.log(formInputData);
 
         try {
-            const url = "http://localhost:8080/user/login";
+            const url = "https://sigmagpt-backend-r4s0.onrender.com/user/login";
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
