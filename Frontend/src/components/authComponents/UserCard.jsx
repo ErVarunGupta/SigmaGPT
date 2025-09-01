@@ -21,11 +21,7 @@ const UserCard = () => {
     try {
       const decoded = jwtDecode(token);
       const userId = decoded.id;
-<<<<<<< HEAD
       const url = `${api_url}/user/${userId}`;
-=======
-      const url = `https://sigmagpt-backend-r4s0.onrender.com/user/${userId}`;
->>>>>>> 6c66665bd3fb085cc7d8f2b77acfdd011f2a9d25
       const response = await fetch(url);
       const data = await response.json();
       // console.log(data);
@@ -52,11 +48,7 @@ const UserCard = () => {
       }
       const decode = jwtDecode(token);
       const userId = decode.id;
-<<<<<<< HEAD
       const url = `${api_url}/user/${userId}`;
-=======
-      const url = `https://sigmagpt-backend-r4s0.onrender.com/user/${userId}`;
->>>>>>> 6c66665bd3fb085cc7d8f2b77acfdd011f2a9d25
       const response = await fetch(url, {
         method: "DELETE",
         headers: {

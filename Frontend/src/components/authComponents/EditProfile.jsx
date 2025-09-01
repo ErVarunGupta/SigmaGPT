@@ -37,11 +37,7 @@ export const EditProfile = () => {
         const userId = decoded.id;
 
         try {
-<<<<<<< HEAD
             const url = `${api_url}/user/${userId}`;
-=======
-            const url = `https://sigmagpt-backend-r4s0.onrender.com/user/${userId}`;
->>>>>>> 6c66665bd3fb085cc7d8f2b77acfdd011f2a9d25
             const response = await fetch(url, {
                 method: 'PUT',
                 headers: {
