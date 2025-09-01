@@ -17,7 +17,7 @@ export const RightComponent = () => {
     setNewChat(false);
     try {
       // const inputdivData = Object.fromEntries(divData.entries());
-      const url = "http://localhost:8080/api/chat";
+      const url = "https://sigmagpt-backend-r4s0.onrender.com/api/chat";
 
       const response = await fetch(url, {
           method: "POST",
