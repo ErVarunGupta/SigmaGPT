@@ -36,7 +36,7 @@ export const EditProfile = () => {
         const userId = decoded.id;
 
         try {
-            const url = `http://localhost:8080/user/${userId}`;
+            const url = `https://sigmagpt-backend-r4s0.onrender.com/user/${userId}`;
             const response = await fetch(url, {
                 method: 'PUT',
                 headers: {
