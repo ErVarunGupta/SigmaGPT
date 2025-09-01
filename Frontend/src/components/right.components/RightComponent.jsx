@@ -18,7 +18,11 @@ export const RightComponent = () => {
     setNewChat(false);
     try {
       // const inputdivData = Object.fromEntries(divData.entries());
+<<<<<<< HEAD
       const url = `${api_url}/api/chat`;
+=======
+      const url = "https://sigmagpt-backend-r4s0.onrender.com/api/chat";
+>>>>>>> 6c66665bd3fb085cc7d8f2b77acfdd011f2a9d25
 
       const response = await fetch(url, {
           method: "POST",

@@ -78,7 +78,11 @@ export const LeftComponent = () => {
 
   const fetchTitle = async () => {
     try {
+<<<<<<< HEAD
       const url = `${api_url}/api/thread`;
+=======
+      const url = "https://sigmagpt-backend-r4s0.onrender.com/api/thread";
+>>>>>>> 6c66665bd3fb085cc7d8f2b77acfdd011f2a9d25
 
       const response = await fetch(url);
       const data = await response.json();
@@ -107,7 +111,11 @@ export const LeftComponent = () => {
 
   const changeThread = async (threadId) => {
     try {
+<<<<<<< HEAD
       const url = `${api_url}/api/thread/${threadId}`;
+=======
+      const url = `https://sigmagpt-backend-r4s0.onrender.com/api/thread/${threadId}`;
+>>>>>>> 6c66665bd3fb085cc7d8f2b77acfdd011f2a9d25
       const response = await fetch(url);
       const data = await response.json();
       console.log(data.response[0].messages);
@@ -123,7 +131,11 @@ export const LeftComponent = () => {
 
   const deleteThread = async (threadId) => {
     try {
+<<<<<<< HEAD
       const url = `${api_url}/api/thread/${threadId}`;
+=======
+      const url = `https://sigmagpt-backend-r4s0.onrender.com/api/thread/${threadId}`;
+>>>>>>> 6c66665bd3fb085cc7d8f2b77acfdd011f2a9d25
       const response = await fetch(url, {
         method: "DELETE"
       });
