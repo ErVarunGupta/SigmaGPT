@@ -44,7 +44,7 @@ function App() {
     <>
       <MyContext.Provider value={providerValues}>
         <Routes>
-          <Route path={"/api"} element={<StartingWindow/>}/>
+          <Route path={"/"} element={<StartingWindow/>}/>
           <Route path={"/dashboard"} element={<Dashboard/>}/>
           <Route path={"/signup"} element={<Signup/>}/>
           <Route path={"/login"} element={<Login/>}/>
