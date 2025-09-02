@@ -19,6 +19,12 @@ app.use(express.json());
 app.use('/api',chatRoute);
 app.use('/user',authRoute);
 
+app.get("/test", async(req, res)=>{
+  res.send({
+    message: "test was successful!"
+  })
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on ${PORT}`);
   dbConnection();
